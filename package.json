@@ -1,0 +1,31 @@
+{
+  "name": "phaser3-transitions",
+  "version": "1.0.0",
+  "description": "Phaser 3 plugin for creating seamless menu transitions.",
+  "author": "Joshua Avrick",
+  "license": "MIT",
+  "main": "./src/phaser3-transitions.js",
+  "scripts": {
+    "build": "webpack -p --watch",
+    "dev": "webpack -d --watch",
+    "server": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.2",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isfunction": "^3.0.9",
+    "lodash.merge": "^4.6.1",
+    "lodash.set": "^4.3.2",
+    "phaser": "^3.11.0"
+  }
+}

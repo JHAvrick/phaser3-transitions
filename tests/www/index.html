@@ -1,0 +1,69 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <title>Phaser 3 Boilerplate</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        margin:0; 
+        padding:0; 
+        overflow: hidden; 
+      }
+
+      #app-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      #game-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+        width: 100%; 
+        overflow: hidden; 
+        margin: auto;
+      }
+
+      #gui-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+        width: 100%; 
+        overflow: hidden; 
+        margin: auto;
+      }
+
+      @media only screen and (max-device-width: 640px)  { 
+        body {
+          margin:0; 
+          padding:0; 
+          background-color: blue;
+        }
+
+        #game-container {
+          height:100%; 
+          width: 100%;
+          overflow: hidden; 
+          background-color: #000000;
+        }
+      }
+    </style>
+
+    <div id="app-container">
+      <div id="game-container"></div>
+      <div id="gui-container"></div>
+    </div>
+
+    <script src="bundle.js" type="text/javascript"></script>
+  </body>
+
+</html>
