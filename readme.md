@@ -1,6 +1,6 @@
 # phaser3-transitions
 
-A UI transitions plugin for Phaser 3. This plugin essentialy provides a simple wrapper for some complex tweens that move UI components into and out of the scene. Each transition can also be used declaratively if you prefer not to pollute your scene with excessive plugins.
+A UI transitions plugin for Phaser 3. This plugin essentialy provides a simple wrapper for some complex tweens that move UI components into and out of the scene. Each transition can also be used declaratively if you prefer not to pollute your scene with excessive plugins. 
 
 - [Features](#feature)
 - [Install and Setup](#install) 
@@ -342,7 +342,7 @@ A combination of the Slide and Fade transitions. The following properties are af
 <a name="using-declaratively"></a>
 ## Using Declaratively
 
-You can bypass the plugin altogether and use each transition class delcaratively if you wish. You can import any of the transition classes directly.
+You can bypass the plugin altogether and use each transition class declaratively if you wish. You can import any of the transition classes directly.
 
 ```javascript
 import { SlideTransition } from 'phaser3-transitions';
