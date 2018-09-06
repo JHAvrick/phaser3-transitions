@@ -2,28 +2,17 @@ import BaseTransition from './base-transition';
 import getOffscreenPosition from './util/get-offscreen-pos';
 
 class SlideTransition extends BaseTransition {
-    /**
+    /** 
      * 
      * @param {Phaser.Scene} scene - The parent scene
-     * @param {Array} targets - An array of targets for this transition
-     * @param {Object} config - The primary config object
-     * 
-     * @param {Boolean} config.chain - Setting chain to true will result in each
-     * item transition seperately in a cascading fashion
-     * 
-     * @param {String} config.offest - Ignored if chain is false. Determines how
-     * much overlap there should be for chained transitions. Must be formatted 
-     * as such: "-=500", "+=500", etc.
-     * 
-     * @param {Number} config.duration - The length of each the entire transition in ms,
-     * or if "chain" is set to true, the length of each individual transition minus
-     * their offset times.
-     * 
-     * @param {String} config.enter - The direction from which the transition
-     * will enter. Valid options include: 'left', 'riight', 'top', and 'bottom'
-     * 
-     * @param {String} config.exit - The direction from which the transition
-     * will exit. Valid options include: 'left', 'riight', 'top', and 'bottom'
+     * @param {Array} targets - An array of game objects to be included in this transition
+     * @param {Object} [config=SlideTransition.Defaults] - The config object. Defaults will be used if not provided.
+     * @param {Number} [config.duration=500] - The duration of this transition
+     * @param {Bool} [config.chain=false] - When true, each object will enter individually with overlap determined by the `offset` setting
+     * @param {String} [config.offset= 80% of duration] - The amount of overlap (in ms) between transitions when `chain` is set to true, using this format: `"-=500"`, `"+=500"`, etc.
+     * @param {Number} [config.fuzz=0] - A number between 0 and 1 which adds randomness to the duration of this transition 
+     * @param {String} [config.enterFrom='left'] - The direction from which the transition will enter. Valid options include: `"left"`, `"right"`, `"top"`, and `"bottom"`
+     * @param {String} [config.exitTo='right'] - The direction from which the transition will exit. Valid options include: `"left"`, `"right"`, `"top"`, and `"bottom"`
      */
     constructor(scene, targets, userConfig = {}){
         super({
