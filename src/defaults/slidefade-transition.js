@@ -12,6 +12,7 @@ class SlideFadeTransition extends BaseTransition {
      * @param {Number} [config.fuzz=0] - A number between 0 and 1 which adds randomness to the duration of this transition 
      * @param {String} [config.enterFrom='bottom'] - The direction from which the transition will enter. Valid options include: `"left"`, `"right"`, `"top"`, and `"bottom"`
      * @param {String} [config.exitTo='top'] - The direction from which the transition will exit. Valid options include: `"left"`, `"right"`, `"top"`, and `"bottom"`
+     * @param {String} [config.distance= half of object width or height] - The slide distance
      */
     constructor(scene, targets, userConfig = {}){
         super({
@@ -33,7 +34,8 @@ SlideFadeTransition.Defaults = {
     chain: false,
     fuzz: 0,
     offset: null, /* This is calculated later as 80% of duration time if left null */
-    duration: 500
+    duration: 500,
+    distance: null /* If left null, this is calculated as half of width or height */
 }
 
 SlideFadeTransition.EnterConfig = function(scene, config){
@@ -52,7 +54,7 @@ SlideFadeTransition.EnterConfig = function(scene, config){
         offset: config.chain ? offset : 0,
         fuzz: fuzz,
         from: (target) => {
-            let startPos = getSlidePosition(scene, target, config.enterFrom);
+            let startPos = getSlidePosition(scene, target, config.enterFrom, config.distance);
             return [0, startPos];
         },
         to: function(target){ 
@@ -80,22 +82,22 @@ SlideFadeTransition.ExitConfig = function(scene, config){
             return [target.alpha, target[directionProp]];
         },
         to: function(target){ 
-            let endPos = getSlidePosition(scene, target, config.exitTo);
+            let endPos = getSlidePosition(scene, target, config.exitTo, config.distance);
             return [0, endPos];
         },
     }
 }
 
-function getSlidePosition(scene, target, direction){
+function getSlidePosition(scene, target, direction, distance){
     switch (direction){
         case 'left':
-            return target.getCenter().x - target.width;
+            return target.getCenter().x - (distance || target.width);
         case 'right':
-            return target.getCenter().x + target.width;
+            return target.getCenter().x + (distance || target.width);
         case 'top': 
-            return target.getCenter().y - target.height;
+            return target.getCenter().y - (distance || target.height);
         case 'bottom':
-            return target.getCenter().y + target.height;
+            return target.getCenter().y + (distance || target.height);
     }    
 }
 

@@ -4,30 +4,31 @@ const EnterData = {
         grow: {
             chain: false,
             duration: 750,
-            fuzz: .3
+            fuzz: 0.01
         },
         explode: {
             chain: false,
             duration: 750,
-            fuzz: .2,
+            fuzz: 0.01,
             offset: 300
         },
         fade: {
             chain: false,
             duration: 750,
-            fuzz: .6
+            fuzz: 0.01
         },
         slide: {
             enterFrom: 'left',
             chain: false,
             duration: 750,
-            fuzz: 0.0
+            fuzz: 0.01
         },
         slidefade: {
             enterFrom: 'left',
             chain: false,
             duration: 750,
-            fuzz: 0.0
+            fuzz: 0.01,
+            distance: 0
         }  
     }
 }
@@ -77,7 +78,8 @@ const EnterMeta = {
             },
             chain: null,
             duration: [100, 1500],
-            fuzz: [0, .99]
+            fuzz: [0, .99],
+            distance: [0, 2000]
         }  
     }
 }
@@ -110,7 +112,8 @@ const ExitData = {
             exitTo: 'right',
             chain: false,
             duration: 750,
-            fuzz: 0
+            fuzz: 0,
+            distance: 0
         }  
     }
 }
@@ -159,7 +162,8 @@ const ExitMeta = {
             },
             chain: null,
             duration: [100, 3000],
-            fuzz: [0, .99]
+            fuzz: [0, .99],
+            distance: [0, 2000]
         }  
     }
 }

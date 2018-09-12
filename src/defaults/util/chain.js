@@ -1,4 +1,4 @@
-import isFunction from 'lodash.isfunction';
+import isFunction from './is-function';
 import fuzzInt from './fuzz-int';
 
 function chain(scene, targets, config){
