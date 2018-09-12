@@ -1,6 +1,6 @@
 {
   "name": "phaser3-transitions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Phaser 3 plugin for creating seamless menu transitions.",
   "author": "Joshua Avrick",
   "license": "MIT",
