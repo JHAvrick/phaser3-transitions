@@ -9,6 +9,7 @@ import GrowTransition from './defaults/grow-transition';
 import ExplodeTransition from './defaults/explode-transition';
 import SlideFadeTransition from './defaults/slidefade-transition';
 import BaseTransition from './defaults/base-transition';
+import MaterializeTransition from './defaults/materialize-transition';
 
 /**
  * Dictionary for resolving a key to it's respective transition class
@@ -19,7 +20,8 @@ const Transitions = {
     grow: GrowTransition,
     explode: ExplodeTransition,
     slidefade: SlideFadeTransition,
-    fadeslide: SlideFadeTransition
+    fadeslide: SlideFadeTransition,
+    materialize: MaterializeTransition
 }
 
 /**

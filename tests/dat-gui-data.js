@@ -29,7 +29,12 @@ const EnterData = {
             duration: 750,
             fuzz: 0.01,
             distance: 0
-        }  
+        },
+        materialize: {
+            chain: false,
+            duration: 750,
+            fuzz: 0.50
+        },
     }
 }
 
@@ -39,7 +44,8 @@ const EnterMeta = {
         SlideFade: 'slidefade',
         Grow: 'grow',
         Explode: 'explode',
-        Fade: 'fade'
+        Fade: 'fade',
+        Materialize: 'materialize'
     },
     configs: {
         grow: {
@@ -80,6 +86,11 @@ const EnterMeta = {
             duration: [100, 1500],
             fuzz: [0, .99],
             distance: [0, 2000]
+        },
+        materialize: {
+            chain: null,
+            duration: [100, 1500],
+            fuzz: [0, .99]
         }  
     }
 }
@@ -114,7 +125,12 @@ const ExitData = {
             duration: 750,
             fuzz: 0,
             distance: 0
-        }  
+        } ,
+        materialize: {
+            chain: false,
+            duration: 750,
+            fuzz: 0.50
+        },
     }
 }
 
@@ -124,7 +140,8 @@ const ExitMeta = {
         SlideFade: 'slidefade',
         Grow: 'grow',
         Explode: 'explode',
-        Fade: 'fade'
+        Fade: 'fade',
+        Materialize: 'materialize'
     },
     configs: {
         grow: {
@@ -164,7 +181,12 @@ const ExitMeta = {
             duration: [100, 3000],
             fuzz: [0, .99],
             distance: [0, 2000]
-        }  
+        },
+        materialize: {
+            chain: null,
+            duration: [100, 1500],
+            fuzz: [0, .99]
+        } 
     }
 }
 

@@ -6,6 +6,7 @@ import FadeTransition from './defaults/fade-transition';
 import GrowTransition from './defaults/grow-transition';
 import SlideTransition from './defaults/slide-transition';
 import SlideFadeTransition from './defaults/slidefade-transition';
+import MaterializeTransition from './defaults/slidefade-transition';
 
 export {
     TransitionsPlugin,
@@ -14,5 +15,6 @@ export {
     FadeTransition,
     GrowTransition,
     SlideTransition,
-    SlideFadeTransition
+    SlideFadeTransition,
+    MaterializeTransition
 }
